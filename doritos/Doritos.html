@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doritos</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/doritos.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+        <img class="rings" src="assets/rings.png" alt="">
+        <header>
+            <div class="logo">
+                <img src="assets/doritos_logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Our company</a></li>
+                    <li><a href="#">Tasty rewards</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul>
+            </nav>
+            <div class="basket">
+                <a href="#">
+                    <ion-icon name="basket"></ion-icon>
+                </a>
+                <span class="basket-items hide">2</span>
+            </div>
+        </header>
+
+        <section>
+            <div class="product">
+                <h1>
+                    <span class="hide">Light a fire under your taste buds</span>
+                </h1>
+                <h3>
+                    <span class="hide">
+                        nacho cheese
+                    </span>
+                </h3>
+                <p>
+                    <span class="hide">
+                        Corn, Vegetable Oil (Corn, Canola, And/or Sunflower Oil), Maltodextrin (Made From Corn), Salt, Cheddar Cheese (Milk, Cheese Cultures, Salt, Enzymes), Whey, Monosodium Glutamate, Buttermilk, Romano Cheese (Part-skim Cow's Milk, Cheese Cultures, Salt, Enzymes), Whey Protein Concentrate, Onion Powder, Corn Flour, Natural And Artificial Flavor, Dextrose, Tomato Powder, Lactose, Spices, Artificial Color (Yellow 6, Yellow 5, And Red 40), Lactic Acid, Citric Acid, Sugar, Garlic Powder, Skim Milk, Red And Green Bell Pepper Powder, Disodium Inosinate, And Disodium Guanylate.
+                        <strong>CONTAIN MILK INGREDIENTS</strong>
+                    </span>
+                    
+                </p>
+                <h2>
+                    <span class="hide">$3.99</span>
+                </h2>
+                <div class="btn">
+                    <a href="#">Add to basket</a>
+                </div>
+            </div>
+
+            <div class="product-display">
+                <figure>
+                    <img src="assets/doritos.png" alt="" class="doritos" id="doritos">
+                    <div class="backdrop"></div>
+                    <span class="hide">
+                        <img src="assets/doritos_chips.png" alt="" class="chips">
+                        <img src="assets/ketchup_1.png" alt="" class="ketchup">
+                        <img src="assets/suya_pepper.png" alt="" class="pepper">
+                    </span>
+                </figure>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // overlay animation
+    TweenMax.to('.first', 1.5, {
+        delay: 0.1,
+        top: '-100%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.to('.second', 1.5, {
+        delay: 0.3,
+        top: '-100%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.to('.third', 1.5, {
+        delay: 0.7,
+        top: '-100%',
+        ease: Expo.easeInOut
+    });
+
+    // header Animation
+    TweenMax.from('.logo img', 1.5, {
+        delay: .5,
+        y: '-100',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('nav ul li a', 1.5, {
+        delay: 1,
+        y: '-100',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.basket', 1.5, {
+        delay: 1.5,
+        y: '-150',
+        ease: Expo.easeInOut
+    });
+
+    // Product animation
+    TweenMax.from('.product h1 .hide', 1.5, {
+        delay: 2,
+        y: '100%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.product h3 .hide', 1.5, {
+        delay: 2.25,
+        y: '100%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.product p .hide', 1.5, {
+        delay: 2.5,
+        y: '100%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.product h2 .hide', 1.5, {
+        delay: 3,
+        y: '100%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.product .btn a', 1.5, {
+        delay: 2.5,
+        y: '-70',
+        ease: Expo.easeInOut
+    });
+    
+    // product display animations
+    TweenMax.from('#doritos', 1.5, {
+        delay: 2.5,
+        y: '-150%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.chips', 1.5, {
+        delay: 2.8,
+        x: '150%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.ketchup', 1.5, {
+        delay: 2.5,
+        y: '150%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.pepper', 1.5, {
+        delay: 2.5,
+        x: '150%',
+        ease: Expo.easeInOut
+    });
+    TweenMax.from('.backdrop', 1.5, {
+        delay: 1.75,
+        y: '150%',
+        ease: Expo.easeInOut
+    });
+</script>
+</body>
+</html>
